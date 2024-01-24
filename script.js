@@ -3,7 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // TODO: Add the slider functionality
     const dimension = document.getElementById('slider')
-    for (let i = 0; i < 256; i++) { // 16x16 grid
+    console.log(dimension.value);
+
+    for (let i = 0; i < dimension * dimension; i++) { // 16x16 grid
         const gridElement = document.createElement('div');
         gridElement.addEventListener('mouseover', draw); // Add drawing functionality
         grid.appendChild(gridElement);
